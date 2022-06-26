@@ -1,6 +1,7 @@
 package service
 
 import (
+	"math/rand"
 	"strings"
 	"time"
 )
@@ -10,6 +11,6 @@ type PayLoad struct {
 }
 
 func (p PayLoad) Process() string {
-	time.Sleep(2000 * time.Millisecond)
+	time.Sleep(time.Duration(rand.Intn(3000)) * time.Millisecond)
 	return strings.ToUpper(p.Text)
 }

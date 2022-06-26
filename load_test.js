@@ -1,6 +1,6 @@
 import http from "k6/http";
 
-const payloadURL = "http://127.0.0.1:4242/payload"
+const payloadURL = "https://go-million.chabk.ir/payload"
 let data = {"text": "Mehrnoosh"}
 
 export const options = {
